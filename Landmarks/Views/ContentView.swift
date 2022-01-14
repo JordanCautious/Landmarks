@@ -26,6 +26,7 @@ struct ContentView: View {
                 
                 HStack {
                     Text("Joshua Tree National Park")
+                        .italic()
                     Spacer()
                     Text("California")
                 }
