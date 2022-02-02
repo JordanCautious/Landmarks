@@ -40,6 +40,7 @@ struct HikeView: View {
                     }
                 } label: {
                     Label("Graph", systemImage: "chevron.right.circle")
+                        .foregroundColor(.black)
                         .labelStyle(.iconOnly)
                         .imageScale(.large)
                         .rotationEffect(.degrees(showDetail ? 90 : 0))
