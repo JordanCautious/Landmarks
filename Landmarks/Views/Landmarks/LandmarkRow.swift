@@ -15,7 +15,14 @@ struct LandmarkRow: View {
             landmark.image
                 .resizable()
                 .frame(width: 50, height: 50)
-            Text(landmark.name)
+                .cornerRadius(5)
+            VStack {
+                Text(landmark.name)
+                    .bold()
+                Text(landmark.park)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+            }
             
             Spacer()
             
@@ -24,6 +31,7 @@ struct LandmarkRow: View {
                     .foregroundColor(.yellow)
             }
         }
+        .padding(.vertical, 4)
     }
 }
 
