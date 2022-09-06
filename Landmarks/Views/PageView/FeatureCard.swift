@@ -37,7 +37,9 @@ struct TextOverlay: View {
                 Text(landmark.name)
                     .font(.title)
                     .bold()
+                    .foregroundColor(.teal)
                 Text(landmark.park)
+                    .foregroundColor(.white)
             }
             .padding()
         }
