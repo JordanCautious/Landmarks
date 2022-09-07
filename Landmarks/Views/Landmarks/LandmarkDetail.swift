@@ -36,8 +36,10 @@ struct LandmarkDetail: View {
                 HStack {
                     Text(landmark.park)
                         .italic()
+                        .bold()
                     Spacer()
                     Text(landmark.state)
+                        .bold()
                 }
                 .font(.subheadline)
                 .foregroundColor(.secondary)
@@ -45,7 +47,8 @@ struct LandmarkDetail: View {
                 Divider()
 
                 Text("About \(landmark.name)")
-                    .font(.title2)
+                    .font(.title3)
+                    .bold()
                 Spacer()
                 Text(landmark.description)
                 
