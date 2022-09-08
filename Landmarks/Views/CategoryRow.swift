@@ -13,10 +13,25 @@ struct CategoryRow: View {
     
     var body: some View {
         VStack {
-            Text(categoryName)
-                .font(.headline)
-                .padding(.leading, 15)
-                .padding(.top, 5)
+                switch categoryName {
+                case "Lakes":
+                    Label("Lakes", systemImage: "drop.fill")
+                        .font(.headline)
+                        .padding(.top, 10)
+                        .foregroundColor(.teal)
+                case "Mountains":
+                    Label("Mountains", systemImage: "leaf.circle.fill")
+                        .font(.headline)
+                        .padding(.top, 10)
+                        .foregroundColor(.green)
+                case "Rivers":
+                    Label("Rivers", systemImage: "drop.fill")
+                        .font(.headline)
+                        .padding(.top, 10)
+                        .foregroundColor(.teal)
+                default:
+                    Text("Doesn't exist lol.")
+                }
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
